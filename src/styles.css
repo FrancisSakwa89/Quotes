@@ -10,6 +10,7 @@ h1,h2{
   font-size: 2em;
   border: 5px solid blue;
   border-style: dashed;
+  font-family: Helvetica;
 }
 ul{
   list-style-type: none;
