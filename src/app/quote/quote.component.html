@@ -10,7 +10,8 @@
 <div *ngFor='let quote of quotes;let i = index'>
  <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
   <button class="btn btn-warning" (click)='toogleDetails(i)'>More Info</button>
-  <button (click)='upvote' id='upvote' class="fa fa-arrow up">{{quote.upvotes}} >upvote</button>
+  <button (click)='upvote(i)' class="fas fa-arrow up">upvote</button>
+  <button (click)='downvote(i)' class="fas fa-arrow up">Downvote</button>
 
   <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
 </div>
