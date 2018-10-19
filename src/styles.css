@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+   background-color: black;
+   text-align: center;
+   text-decoration: none;
+   font-family: fantasy;
+}
+h1,h2{
+  color: red;
+  font-size: 2em;
+  border: 5px solid blue;
+  border-style: dashed;
+}
+ul{
+  list-style-type: none;
+  color: #39CCCC;
+  font-size: 1.7em;
+}
+p{
+   color:orange ;
+}
