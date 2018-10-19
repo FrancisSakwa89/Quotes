@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import {Quote} from './quote'
+import { Component, OnInit } from '@angular/core';
+import {Quote} from '../quote'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  // styleUrls: ['./app.component.css']
+  selector: 'app-quote',
+  templateUrl: './quote.component.html',
+  styleUrls: ['./quote.component.css']
 })
-export class AppComponent {
+export class QuoteComponent implements OnInit {
 
   quotes = [
     new Quote(1,'Those who dare to fail miserably can achieve greatly.','By John .F. Kennedy'),
@@ -16,9 +16,16 @@ export class AppComponent {
     new Quote(5,'A stone is heavy, sandy is weight but a fools wrath is heavier than the two combined','By Boyd'),
   ]
 
+  toogleDetails(index){
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  completeQuote(isComplete,index){
+        if (isComplete){
+            this.quotes.splice(index,1);
+            }
+            }
+  constructor() { }
+  ngOnInit() {
+  }
 
-// constructor(){
-//
-//   this.quotes = ["A stone is heavy, sandy is weight but a fools wrath is heavier than the two combined","The higher you go the cooler it becomes"];
-// }
 }
