@@ -3,7 +3,7 @@
 
 <ul>
 <div *ngFor='let quote of quotes;let i = index'>
-  <li id="{{i}}" appStrikethrough>{{quote.name}} was creted on {{quote.createdDate|date|uppercase}}</li>
+  <li id="{{i}}" appStrikethrough>{{quote.name}}</li>
   <button  (click)='toogleDetails(i)'>More Info</button>
 
   <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
