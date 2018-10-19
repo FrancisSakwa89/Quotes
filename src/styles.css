@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-   background-color: black;
+   background-color: purple;
    text-align: center;
    text-decoration: none;
    font-family: fantasy;
@@ -20,3 +20,4 @@ ul{
 p{
    color:orange ;
 }
+/* @import "~bootstrap/dist/css/bootstrap.css" */
